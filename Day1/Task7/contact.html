@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us Page</title>
+
+    <meta
+      name="description"
+      content="Have a question or need assistance? Contact Marvel Studios today."
+    />
+
+    <meta
+      property="og:title"
+      content="We are here for you when you need Us the most."
+    />
+    <meta
+      property="og:description"
+      content="Need help with your order or account? Contact Marvel Studios support team."
+    />
+    <meta property="og:image" content="./images/hero.webp" />
+    <meta property="og:url" content="https://www.marvelstudios.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Marvel Studios" />
+
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="page-title">Contact US</h1>
+      <nav class="navbar">
+        <div class="logo">
+          <button id="theme-toggle">Toggle Dark Mode</button>
+          <img src="./images/marvel-logo.svg" alt="Marvel Logo" />
+        </div>
+        <div class="navlinks">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./team.html">Team</a>
+          <a href="./services.html">Services</a>
+          <a href="" aria-current="page">Contact Us</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <br />
+      <form>
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder=" " required />
+            <label for="name">Enter your Name:</label>
+          </div>
+
+          <div class="form-group">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder=" "
+              required
+            />
+            <label for="email">Enter your Email:</label>
+          </div>
+
+          <div class="form-group">
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder=" "
+              required
+            />
+            <label for="phone">Enter your Phone number:</label>
+          </div>
+
+          <div class="select-wrapper">
+            <select name="department" id="department">
+              <option value="operations">Operations</option>
+              <option value="design">Design</option>
+              <option value="qa">QA</option>
+            </select>
+            <label for="department">Select your Department:</label>
+          </div>
+
+          <div class="form-group">
+            <textarea
+              name="message"
+              id="message"
+              placeholder=" "
+              required
+            ></textarea>
+            <label for="message">Write your Message:</label>
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" name="newsletter" id="newsletter" />
+            <span></span>
+            Subscribe to our newsletter
+          </label>
+
+          <button type="submit" class="btn">Submit</button>
+        </fieldset>
+        <br />
+      </form>
+
+      <h2>Location</h2>
+
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.572279223106!2d-89.05813492344285!3d37.893684305300255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8877217f6c5d5a2f%3A0x5bcb82fab72a8d4c!2sMaple%20St%2C%20Six%20Mile%20Township%2C%20IL%2C%20USA!5e0!3m2!1sen!2sin!4v1784712198655!5m2!1sen!2sin"
+          width="600"
+          height="450"
+          style="border: 0"
+          title="Marvel Studio Pvt. Ltd."
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+        ></iframe>
+      </div>
+
+      <h2>Address</h2>
+
+      <address>
+        123 Maple Street, <br />
+        Suite 100, <br />
+        Anytown, NY 12345
+      </address>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Marvel Studios. All Rights Reserved.</p>
+    </footer>
+    <script src="./js/dark-mode.js"></script>
+  </body>
+</html>
