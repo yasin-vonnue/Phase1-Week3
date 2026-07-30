@@ -1,59 +1,109 @@
 //if-else statements
 
-const score = 85;
-let grade;
-
-if (score >= 90) {
-  grade = "A";
-} else if (score >= 80) {
-  grade = "B";
-} else {
-  grade = "C";
+function gradeIfElse(score) {
+  if (score >= 90) {
+    return "A";
+  } else if (score >= 80) {
+    return "B";
+  } else if (score >= 70) {
+    return "C";
+  } else if (score >= 60) {
+    return "D";
+  } else {
+    return "F";
+  }
 }
-
-console.log(grade);
 
 //Switch statement
 
-const pet = "dog";
-let sound;
-
-switch (pet) {
-  case "cat":
-    sound = "meow";
-    break;
-
-  case "dog":
-    sound = "woof";
-    break;
-
-  default:
-    sound = "unknown";
+function gradeSwitch(score) {
+  switch (true) {
+    case score >= 90:
+      return "A";
+    case score >= 80:
+      return "B";
+    case score >= 70:
+      return "C";
+    case score >= 60:
+      return "D";
+    default:
+      return "F";
+  }
 }
-
-console.log(sound);
 
 //Ternary Chain
 
-const age = 20;
-
-const type = age < 13 ? "child" : age < 20 ? "teen" : "adult";
-
-console.log(type);
+function gradeTernary(score) {
+  return score >= 90
+    ? "A"
+    : score >= 80
+      ? "B"
+      : score >= 70
+        ? "C"
+        : score >= 60
+          ? "D"
+          : "F";
+}
 
 //Lookup Object
 
-const role = "admin";
+function gradeLookup(score) {
+  const key =
+    score >= 90
+      ? "A"
+      : score >= 80
+        ? "B"
+        : score >= 70
+          ? "C"
+          : score >= 60
+            ? "D"
+            : "F";
 
-const corePermissions = {
-  admin: ["read", "write", "delete"],
-  editor: ["read", "write"],
-  guest: ["read"],
-};
+  const grades = {
+    A: "A",
+    B: "B",
+    C: "C",
+    D: "D",
+    F: "F",
+  };
 
-const access = corePermissions[role] || ["none"];
+  return grades[key];
+}
 
-console.log(access);
+const score = 85;
+
+console.log(gradeIfElse(score));
+console.log(gradeSwitch(score));
+console.log(gradeTernary(score));
+console.log(gradeLookup(score));
+
+const ITERATIONS = 1_000_000;
+
+console.time("If/Else");
+for (let i = 0; i < ITERATIONS; i++) {
+  gradeIfElse(85);
+}
+console.timeEnd("If/Else");
+
+console.time("Switch");
+for (let i = 0; i < ITERATIONS; i++) {
+  gradeSwitch(85);
+}
+console.timeEnd("Switch");
+
+console.time("Ternary");
+for (let i = 0; i < ITERATIONS; i++) {
+  gradeTernary(85);
+}
+console.timeEnd("Ternary");
+
+console.time("Lookup Object");
+for (let i = 0; i < ITERATIONS; i++) {
+  gradeLookup(85);
+}
+console.timeEnd("Lookup Object");
+
+//processQueue
 
 function processQueue(items) {
   let queue = [...items];
