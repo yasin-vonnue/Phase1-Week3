@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Demo Page</title>
+  </head>
+
+  <body>
+    <h1>Event Propagation Demo</h1>
+
+    <div id="outer" style="padding: 30px; background: lightblue">
+      Outer
+      <div id="middle" style="padding: 30px; background: lightgreen">
+        Middle
+        <div id="child" style="padding: 30px; background: lightcoral">
+          child
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <form id="myForm">
+      <input type="text" placeholder="Name" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <br />
+
+    <a href="https://www.google.com" id="myLink">Go to Example</a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
