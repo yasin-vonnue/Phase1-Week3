@@ -1,0 +1,131 @@
+:root {
+  --primary: #e62429;
+  --dark: #111;
+  --white: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--primary);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo img {
+  height: 45px;
+}
+
+.navlinks {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navlinks a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.navlinks a:hover,
+.navlinks a:focus-visible {
+  text-decoration: underline;
+}
+
+.user-links {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 4px;
+}
+
+button:hover,
+button:focus-visible {
+  background: var(--white);
+  color: var(--dark);
+}
+
+main {
+  padding: 20px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+.content {
+  height: 1000px;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .navlinks {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 250px;
+    height: 100vh;
+    background: var(--dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 80px 20px;
+    transition: right 0.3s ease;
+    z-index: 1001;
+  }
+
+  .navlinks.open {
+    right: 0;
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+    z-index: 1000;
+  }
+
+  .overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .user-links {
+    margin-left: auto;
+  }
+}
