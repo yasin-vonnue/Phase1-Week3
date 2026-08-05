@@ -1,0 +1,33 @@
+body {
+  font-family: Arial;
+}
+
+#board {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  background: #eee;
+  padding: 10px;
+}
+
+.cards {
+  min-height: 200px;
+}
+
+.card {
+  background: white;
+  padding: 10px;
+  margin: 10px 0;
+  cursor: move;
+}
+
+.over {
+  background: lightblue;
+}
+
+.picked {
+  outline: 3px solid royalblue;
+}
