@@ -5,12 +5,27 @@ class Cart {
   }
 
   addItem(item) {
+    const existing = this.items.find((i) => i.id === item.id);
+
+    if (existing) {
+      return new Cart(
+        this.items.map((i) =>
+          i.id === item.id ? { ...i, quantity: i.quantity + item.quantity } : i,
+        ),
+        this.coupon,
+      );
+    }
+
     return new Cart([...this.items, item], this.coupon);
   }
 
   removeItem(id) {
     return new Cart(
-      this.items.filter((item) => item.id !== id),
+      this.items
+        .map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity - 1 } : item,
+        )
+        .filter((item) => item.quantity > 0),
       this.coupon,
     );
   }
@@ -18,7 +33,7 @@ class Cart {
   updateQuantity(id, qty) {
     return new Cart(
       this.items.map((item) =>
-        item.id === id ? { ...item, quantity: qty } : item,
+        item.id === id ? { ...item, quantity: Math.max(1, qty) } : item,
       ),
       this.coupon,
     );
@@ -85,7 +100,7 @@ function render(cart) {
       .map((item) => `<p>${item.name} x ${item.quantity}</p>`)
       .join("")}
 
-    <strong>Total: $${cart.getTotal()}</strong>
+    <strong>Total: $${cart.getTotal().toFixed(2)}</strong>
     `;
 }
 
@@ -96,12 +111,28 @@ notifyObservers();
 document.getElementById("add").onclick = () => {
   setCart(
     cart.addItem({
-      id: Date.now(),
+      id: 1,
       name: "Apple",
       price: 10,
       quantity: 1,
     }),
   );
+};
+
+document.getElementById("remove").onclick = () => {
+  setCart(cart.removeItem(1));
+};
+
+document.getElementById("update").onclick = () => {
+  const qty = Number(document.getElementById("qty").value);
+
+  setCart(cart.updateQuantity(1, qty));
+};
+
+document.getElementById("applyCoupon").onclick = () => {
+  const percent = Number(document.getElementById("coupon").value);
+
+  setCart(cart.applyCoupon(percent));
 };
 
 document.getElementById("undo").onclick = undo;
