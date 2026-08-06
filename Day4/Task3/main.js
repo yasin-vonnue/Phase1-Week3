@@ -18,17 +18,22 @@ async function fetchJSON(url, options = {}) {
 }
 
 const controller = new AbortController();
-const timeoutId = setTimout(() => controller.abort(), 5000);
+const timeoutId = setTimeout(() => controller.abort(), 5000);
 
 (async () => {
   try {
-    const response = await fetch({
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
       signal: controller.signal,
     });
+
+    if (!response.ok) {
+      throw new HttpError(response);
+    }
 
     console.log("Status:", response.status, response.statusText);
 
     console.log("Headers:");
+
     response.headers.forEach((value, key) => {
       console.log(`${key}: ${value}`);
     });
@@ -36,14 +41,14 @@ const timeoutId = setTimout(() => controller.abort(), 5000);
     const posts = await response.json();
     console.log("Posts:", posts);
 
-    const postsViaWrapper = await fetchJSON(
+    const postViaWrapper = await fetchJSON(
       "https://jsonplaceholder.typicode.com/posts",
       {
         signal: controller.signal,
       },
     );
 
-    console.log("Fetched via fetchJSON:", postsViaWrapper);
+    console.log("Fetched via fetchJSON:", postViaWrapper);
 
     const createdPost = await fetchJSON(
       "https://jsonplaceholder.typicode.com/posts",
@@ -52,14 +57,11 @@ const timeoutId = setTimout(() => controller.abort(), 5000);
         headers: {
           "Content-Type": "application/json",
         },
+        signal: controller.signal,
         body: JSON.stringify({
           title: "My New Post",
-          body: JSON.stringify({
-            title: "My New Post",
-            body: "This is a sample post.",
-            userId: 1,
-          }),
-          signal: controller.signal,
+          body: "This is a sample post.",
+          userId: 1,
         }),
       },
     );
