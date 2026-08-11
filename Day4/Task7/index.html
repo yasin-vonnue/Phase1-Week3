@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Posts</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="container">
+      <h1>Posts</h1>
+
+      <div id="posts" class="posts"></div>
+
+      <p id="loading" class="loading" hidden>Loading posts...</p>
+
+      <div id="sentinel"></div>
+
+      <p id="end-message" class="end-message" hidden>End of feed</p>
+
+      <div id="error" class="error" hidden>
+        <p>Something went wrong while loading posts.</p>
+
+        <button id="retry">Retry</button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
