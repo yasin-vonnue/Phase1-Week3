@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h2 {
+  margin: 20px 0 10px;
+}
+
+label {
+  display: block;
+  padding: 10px;
+  background: #ddd;
+  cursor: pointer;
+}
+
+.accordion-btn {
+  width: 100%;
+  padding: 10px;
+  background: #ddd;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: #eee;
+  padding: 0 10px;
+}
+
+.content.open {
+  max-height: 200px;
+  padding: 10px;
+}
+
+.content[hidden] {
+  display: block;
+  max-height: 0;
+  padding: 0 10px;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 20px;
+}
+
+.tabs input {
+  display: none;
+}
+
+.tabs label {
+  display: block;
+  padding: 12px;
+  background: #ddd;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.panel {
+  display: none;
+  padding: 15px;
+  border: 1px solid #ccc;
+  grid-column: 2;
+  grid-row: 1 / span 10;
+}
+
+#tab1:checked + label + .panel,
+#tab2:checked + label + .panel,
+#tab3:checked + label + .panel {
+  display: block;
+}
+
+#tab1:checked + label,
+#tab2:checked + label,
+#tab3:checked + label {
+  background: #333;
+  color: white;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.rating label::before {
+  content: "\2606";
+  font-size: 2rem;
+  color: gray;
+}
+
+.rating input:checked ~ label::before {
+  content: "\2605";
+  color: gold;
+}
+
+.rating label:hover::before,
+.rating label:hover ~ label::before {
+  content: "\2605";
+  color: gold;
+}

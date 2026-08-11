@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Demo Page</title>
+    <link rel="stylesheet" href="accordion.css" />
+  </head>
+  <body>
+    <h2>Accordion</h2>
+
+    <div class="accordion">
+      <h3>
+        <button
+          class="accordion-btn"
+          id="acc-btn-1"
+          aria-expanded="false"
+          aria-controls="panel-1"
+        >
+          What is CSS?
+        </button>
+      </h3>
+
+      <div
+        id="panel-1"
+        class="content"
+        role="region"
+        aria-labelledby="acc-btn-1"
+        hidden
+      >
+        <p>CSS is used to style HTML pages.</p>
+      </div>
+
+      <h3>
+        <button
+          class="accordion-btn"
+          id="acc-btn-2"
+          aria-expanded="false"
+          aria-controls="panel-2"
+        >
+          What is JavaScript?
+        </button>
+      </h3>
+
+      <div id="panel-2" class="content" hidden>
+        <p>Javascript adds interactivity to web pages.</p>
+      </div>
+
+      <h3>
+        <button
+          class="accordion-btn"
+          id="acc-btn-3"
+          aria-expanded="false"
+          aria-controls="panel-3"
+        >
+          What is HTML?
+        </button>
+      </h3>
+      <div id="panel-3" class="content" hidden>
+        <p>HTML provides the structure of a webpage.</p>
+      </div>
+    </div>
+
+    <h2>Tabs</h2>
+
+    <div class="tabs">
+      <input type="radio" name="tabs" id="tab1" checked />
+      <label for="tab1">Home</label>
+      <div class="panel">Home Content</div>
+
+      <input type="radio" name="tabs" id="tab2" />
+      <label for="tab2">Profile</label>
+      <div class="panel">Profile Content</div>
+
+      <input type="radio" name="tabs" id="tab3" />
+      <label for="tab3">Settings</label>
+      <div class="panel">Settings Content</div>
+    </div>
+
+    <h2>Star Rating</h2>
+
+    <div class="rating">
+      <input type="radio" name="rating" id="star5" />
+      <label for="star5"></label>
+
+      <input type="radio" name="rating" id="star4" />
+      <label for="star4"></label>
+
+      <input type="radio" name="rating" id="star3" />
+      <label for="star3"></label>
+
+      <input type="radio" name="rating" id="star2" />
+      <label for="star2"></label>
+
+      <input type="radio" name="rating" id="star1" />
+      <label for="star1"></label>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
