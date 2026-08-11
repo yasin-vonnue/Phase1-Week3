@@ -1,0 +1,16 @@
+.field-error {
+  display: block;
+  color: #d93025;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.is-invalid {
+  border: 2px solid #d93025;
+  outline: none;
+}
+
+.is-valid {
+  border: 2px solid #2e7d32;
+  outline: none;
+}

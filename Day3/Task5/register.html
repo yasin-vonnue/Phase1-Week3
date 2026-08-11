@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register Form</title>
+    <link rel="stylesheet" href="register.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Full Registration Form</h1>
+    </header>
+
+    <main>
+      <form id="registrationForm">
+        <fieldset>
+          <legend>Personal Details</legend>
+
+          <p>
+            <label for="name"
+              >Enter your name: <span class="required">*</span></label
+            >
+            <input type="text" id="name" required name="name" />
+          </p>
+
+          <p>
+            <label for="email"
+              >Enter your email: <span class="required">*</span></label
+            >
+            <input type="email" id="email" name="email" required />
+          </p>
+
+          <p>
+            <label for="phone"
+              >Enter your phone number: <span class="required">*</span></label
+            >
+            <input type="tel" id="phone" name="phone" required />
+          </p>
+
+          <p>
+            <label for="age"
+              >Enter your age: <span class="required">*</span></label
+            >
+            <input type="number" id="age" name="age" required />
+          </p>
+
+          <p>
+            <label for="github"
+              >Add your portfolio website:
+              <span class="required">*</span></label
+            >
+            <input type="url" id="github" name="github" required />
+          </p>
+
+          <p>
+            <label for="dob">Enter your DOB: </label>
+            <input type="date" id="dob" name="dob" />
+          </p>
+
+          <p>
+            <label for="entry">Enter your entry time: </label>
+            <input type="time" id="entry" name="entry" />
+          </p>
+
+          <p>
+            <label for="birthdaytime">Birthday (date and time): </label>
+            <input
+              type="datetime-local"
+              id="birthdaytime"
+              name="birthdaytime"
+            />
+          </p>
+
+          <p>
+            <label for="bdaymonth">Birthday (month and year):</label>
+            <input type="month" id="bdaymonth" name="bdaymonth" />
+          </p>
+
+          <p>
+            <label for="week">Select a week:</label>
+            <input type="week" id="week" name="week" />
+          </p>
+
+          <p>Which vehicle do you have?</p>
+
+          <p>
+            <input type="checkbox" id="vehicle1" name="vehicle1" />
+            <label for="vehicle1">I have a bike</label>
+
+            <input type="checkbox" id="vehicle2" name="vehicle2" />
+            <label for="vehicle2">I have a car</label>
+          </p>
+
+          <p>
+            <label for="myfile"
+              >Attach your resume: <span class="required">*</span></label
+            >
+            <input type="file" id="myfile" name="myfile" required />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Account</legend>
+
+          <p>
+            <label for="username"
+              >Enter your username: <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="username"
+              pattern="[A-Za-z0-9_]{3,20}"
+              name="username"
+              required
+            />
+          </p>
+
+          <p>
+            <label for="pwd"
+              >Enter your password: <span class="required">*</span></label
+            >
+            <input
+              type="password"
+              id="pwd"
+              required
+              minlength="5"
+              maxlength="18"
+              name="pwd"
+            />
+          </p>
+
+          <p>
+            <label for="confirmpwd"
+              >Confirm your password: <span class="required">*</span></label
+            >
+            <input
+              type="password"
+              id="confirmpwd"
+              required
+              minlength="5"
+              maxlength="18"
+              name="confirmpwd"
+            />
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferences</legend>
+
+          <p>Choose your favorite Web language:</p>
+
+          <p>
+            <input type="radio" id="notifications" name="notifications" />
+            <label for="notifications">Enable notifications</label> <br />
+          </p>
+
+          <p>
+            <label for="skill">Skill level(between 1 and 10):</label>
+            <input type="range" id="skill" min="1" max="10" name="skill" />
+          </p>
+
+          <p>
+            <label for="profilecolor">Profile color picker:</label>
+            <input type="color" id="profilecolor" name="profilecolor" />
+          </p>
+
+          <p>
+            <label for="job-title"
+              >Job Title: <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="job-title"
+              list="job-titles"
+              placeholder="e.g. Associate Software Developer"
+              name="job-title"
+              required
+            />
+
+            <datalist id="job-titles">
+              <option value="Accountant"></option>
+              <option value="Data Scientist"></option>
+              <option value="Graphic Designer"></option>
+              <option value="Project Manager"></option>
+              <option value="Associate Software Developer"></option>
+              <option value="Data Engineer"></option>
+              <option value="QA Engineer"></option>
+              <option value="Engineering Manager"></option>
+            </datalist>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Register</button>
+        </p>
+      </form>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
