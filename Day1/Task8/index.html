@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sticky Navigation Bar page</title>
+    <link rel="stylesheet" href="navigation.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="https://www.marvel.com/assets/marvel-logo.svg"
+            alt="Marvel Logo"
+          />
+        </div>
+
+        <div class="navlinks" id="drawer">
+          <a href="#">Home</a>
+          <a href="#">Games</a>
+          <a href="#">Movies</a>
+        </div>
+
+        <div class="user-links">
+          <button type="button" id="login-btn">Login</button>
+          <button type="button" id="signup-btn">SignUp</button>
+          <button
+            type="button"
+            id="menu-btn"
+            class="menu-btn"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="drawer"
+          >
+            &#9776;
+          </button>
+        </div>
+      </nav>
+      <div id="overlay" class="overlay"></div>
+    </header>
+
+    <main>
+      <div class="content">scroll down to test sticky navbar</div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

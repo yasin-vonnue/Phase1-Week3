@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Page</title>
+
+    <meta
+      name="description"
+      content="Marvel Studios, LLC, formerly knowns as Marvel Films, is an American film
+    and television production company."
+    />
+
+    <meta
+      property="og:title"
+      content="Marvel Studios, LLC, formerly known as Marvel Films"
+    />
+    <meta
+      property="og:description"
+      content="The studio also operates the smaller Marvel Studios Animation division as well."
+    />
+    <meta property="og:image" content="./images/hero.webp" />
+    <meta property="og:url" content="https://www.marvelstudios.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Marvel Studios" />
+
+    <script>
+      const savedTheme = localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Marvel Studios Pvt. Ltd.</h1>
+      <h2 class="page-title">About US</h2>
+      <nav class="navbar">
+        <div class="logo">
+          <button id="theme-toggle" aria-pressed="false">
+            Switch to Dark Mode
+          </button>
+          <img src="./images/marvel-logo.svg" alt="Marvel Logo" />
+        </div>
+        <div class="navlinks">
+          <a href="./index.html">Home</a>
+          <a href="./about.html" aria-current="page">About</a>
+          <a href="./team.html">Team</a>
+          <a href="./services.html">Services</a>
+          <a href="./contact.html">Contact Us</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="timeline">
+        <h2>Company History</h2>
+        <dl>
+          <dt>1998</dt>
+          <dd>
+            <strong>The Foundation:</strong> The company was founded in a small
+            garage focused on developing core technology for early-stage digital
+            projects.
+          </dd>
+
+          <dt>2002</dt>
+          <dd>
+            <strong>First Major Expansion:</strong> Successfully launched our
+            flagship product,expanding operations beyond the initial local
+            market.
+          </dd>
+
+          <dt>2006</dt>
+          <dd>
+            <strong>Series A Funding:</strong> Secured major institutional
+            funding, allowing for rapid engineering team expansion and global
+            market testing.
+          </dd>
+
+          <dt>2020</dt>
+          <dd>
+            <strong>Global Headquarters:</strong> Moved to our current central
+            office to accommodate a workforce that had grown by x4 in just three
+            years.
+          </dd>
+
+          <dt>2024</dt>
+          <dd>
+            <strong>AI Integration:</strong> Launched our
+            predictive-intelligence engine, streamlining user experiences and
+            automating complex analytics.
+          </dd>
+        </dl>
+      </section>
+
+      <section class="mission">
+        <h2>Mission</h2>
+        <blockquote class="pull-quote">
+          "To empower individuals and organizations globally by providing
+          intuitive, sustainable, and innovative solutions that drive progress
+          and inspire creativity."
+        </blockquote>
+      </section>
+
+      <section class="values">
+        <h2>Our Values</h2>
+
+        <div class="values-grid">
+          <article class="card">
+            <h3>Challenge Conventional Thinking</h3>
+            <p>
+              Marvel Studios thrives on challenging the status quo. We encourage
+              our team and clients to think beyond traditional boundaries.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Embrace the Learning Journey</h3>
+            <p>
+              At Marvel Studios, learning is embedded in our DNA. We tackle each
+              challenge with curiosity and an open mind, embracing
+              experimentation and adapting to new insights along the way.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Commitment to Excellence</h3>
+            <p>
+              When we take on a project, we fully commit to its success. We dive
+              deep into each detail, striving to deliver solutions that resonate
+              and make a lasting impact.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="address">
+        <h2>Address</h2>
+        <address>
+          <strong>Marvel Studios Pvt. Ltd.</strong><br />
+          Visit us at:
+          <a href="https://www.marvelstudios.com">www.marvelstudios.com</a
+          ><br />
+          Email:
+          <a href="mailto:marvelstudios@gmail.com">marvelstudios@gmail.com</a
+          ><br />
+        </address>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>Marvel Studios</h3>
+          <p>Navigating the ever-changing tech landscape</p>
+        </div>
+
+        <div class="footer-column">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Investors</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Services</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Marvel Studios. All Rights Reserved.</p>
+        <ul class="legal-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="./js/dark-mode.js"></script>
+  </body>
+</html>

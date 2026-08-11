@@ -1,0 +1,73 @@
+body {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.featured {
+  grid-column: span 2;
+  grid-row: span 2;
+  flex-direction: row;
+}
+
+.project img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  display: block;
+}
+
+.featured img {
+  width: 50%;
+  height: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  transform: translateY(100%);
+  transition: transform 0.3s;
+}
+
+.overlay a {
+  color: white;
+  text-decoration: none;
+}
+
+.project:hover .overlay {
+  transform: translateY(0);
+}
