@@ -305,3 +305,28 @@ html {
   margin-top: 3rem;
   padding: 3rem 2rem;
 }
+
+.field-error {
+  display: block;
+  min-height: 1.5rem;
+  margin-top: 0.4rem;
+  color: #dc2626;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.form-group input.is-invalid,
+.form-group textarea.is-invalid {
+  border-color: #dc2626;
+}
+
+.form-group input.is-valid,
+.form-group textarea.is-valid {
+  border-color: #16a34a;
+}
+
+.cta-form button:disabled,
+#contact-form button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
