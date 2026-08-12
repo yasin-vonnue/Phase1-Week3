@@ -1,0 +1,307 @@
+.timeline {
+  padding: 2rem;
+}
+
+.timeline dl {
+  position: relative;
+  border-left: 4px solid var(--color-primary);
+  padding-left: 2rem;
+}
+
+.timeline dt {
+  color: var(--color-primary);
+  font-weight: bold;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.timeline dt::before {
+  content: "";
+  position: absolute;
+  left: -2.45rem;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: var(--color-primary);
+  border-radius: 50%;
+}
+
+.timeline dd {
+  margin-top: 1.5rem;
+}
+
+.page-title {
+  text-align: center;
+  background: var(--color-secondary);
+}
+
+.timeline,
+.mission,
+.values {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.pull-quote {
+  font-size: 2rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--color-secondary);
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.pricing {
+  padding: 3rem 2rem 5rem;
+  overflow-x: auto;
+  height: 600px;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: separate;
+  margin: 3rem 0;
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.pricing-table thead th {
+  position: sticky;
+  top: -50px;
+  z-index: 20;
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.pricing-table tbody tr:nth-child(even) {
+  background: #f1f5f5;
+}
+
+.pricing-table .recommended {
+  background-color: rgb(255 0 0 / 100%);
+  border-left: 2px solid var(--color-primary);
+  border-right: 2px solid var(--color-primary);
+  font-weight: bold;
+}
+
+.cta-section {
+  background: var(--color-primary);
+  color: white;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.cta-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cta-form input,
+.cta-form textarea {
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  border: none;
+}
+
+.cta-form button {
+  padding: 0.75rem;
+  background: white;
+  color: var(--color-primary);
+  border: none;
+  cursor: pointer;
+}
+
+.team {
+  padding: 3rem 2rem;
+}
+
+.department h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.department {
+  margin-bottom: 4rem;
+  scroll-margin-top: 200px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--color-secondary);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  background: var(--color-bg);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-group label {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: var(--color-secondary);
+  pointer-events: none;
+  transition: 0.25s ease;
+  background: transparent;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--color-secondary);
+  border-radius: var(--radius);
+  appearance: none;
+  background: var(--color-bg);
+}
+
+.select-wrapper.success select {
+  border-color: green;
+}
+
+.select-wrapper.error select {
+  border-color: red;
+}
+
+.select-wrapper label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+}
+
+.select-wrapper {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.form-group.success label {
+  color: green;
+}
+
+.form-group.error label {
+  color: red;
+}
+
+.select-wrapper select:focus + label,
+.select-wrapper select:valid + label {
+  transform: translateY(-1.6rem) scale(0.85);
+  background: var(--color-bg);
+  padding: 0 0.4rem;
+  color: var(--color-primary);
+}
+
+.select-wrapper::after {
+  content: "\2193";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-20%);
+  pointer-events: none;
+  color: var(--color-secondary);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox span {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-secondary);
+  border-radius: 4px;
+}
+
+.checkbox input:focus-visible + span {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.checkbox input:checked + span {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.checkbox input:checked + span::after {
+  content: "✓";
+  color: white;
+  display: block;
+  text-align: center;
+}
+
+.form-group.success input,
+.form-group.success textarea {
+  border-color: green;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+  border-color: red;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  transform: translateY(-1.6rem) scale(0.85);
+  background: var(--color-bg);
+  padding: 0 0.4rem;
+  color: var(--color-primary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.select-wrapper select:focus {
+  border-color: var(--color-primary);
+}
+
+.map-container {
+  max-width: 900px;
+  margin-top: 20px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 15%);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  display: block;
+}
+
+.faq {
+  margin-top: 3rem;
+  padding: 3rem 2rem;
+}

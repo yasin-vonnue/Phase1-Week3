@@ -1,0 +1,154 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  padding: 0.5rem 1rem;
+  background: var(--color-secondary);
+  color: var(--color-bg);
+  text-align: center;
+}
+
+main {
+  width: min(100% - 2rem, 1200px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem 0;
+  animation: page-enter 0.5s ease;
+}
+
+.features,
+.testimonials {
+  padding: 4rem 2rem;
+}
+
+footer {
+  padding: 2rem;
+  background: var(--color-secondary);
+  color: var(--color-bg);
+  text-align: center;
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: min(100%, 1200px);
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1;
+}
+
+.footer-column ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-column a {
+  color: var(--color-bg);
+  text-decoration: none;
+}
+
+.footer-column a:hover,
+.footer-column a:focus-visible {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: min(100%, 1200px);
+  margin: 2rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgb(255 255 255 / 30%);
+}
+
+.legal-links {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+cite {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  color: var(--color-secondary);
+  font-style: normal;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (width <= 768px) {
+  main {
+    width: min(100% - 1.5rem, 1200px);
+  }
+
+  .features,
+  .testimonials {
+    padding: 3rem 1rem;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (width <= 480px) {
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  main {
+    width: min(100% - 1rem, 1200px);
+    padding: 1rem 0;
+  }
+
+  .features,
+  .testimonials {
+    padding: 2rem 0.5rem;
+  }
+
+  footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .legal-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main {
+    animation: none;
+  }
+}
