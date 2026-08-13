@@ -9,7 +9,6 @@ export function setupHomeNewAPI() {
   const retryButton = document.querySelector("#latest-posts-retry");
 
   if (!grid || !loading || !errorContainer || !retryButton) {
-    console.warn("Latest news elements are missing from the home page.");
     return;
   }
 
