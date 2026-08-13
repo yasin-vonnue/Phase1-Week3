@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Github Profile</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="about-page">
+      <section class="github-section">
+        <h1>Github Profile</h1>
+
+        <form id="github-form" class="search-form">
+          <label for="username">Github Username</label>
+
+          <div class="search-box">
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter username"
+              autocomplete="off"
+            />
+
+            <button type="submit">Search</button>
+          </div>
+        </form>
+
+        <p id="loading" class="message loading" hidden>
+          Loading Github profile...
+        </p>
+
+        <p id="error" class="message error" hidden></p>
+
+        <section id="profile" class="profile-card" hidden>
+          <img src="" alt="Github profile avatar" id="avatar" class="avatar" />
+
+          <div class="profile-info">
+            <h2 id="name"></h2>
+
+            <p id="bio"></p>
+
+            <p>
+              <strong>Location:</strong>
+              <span id="location"></span>
+            </p>
+
+            <div class="stats">
+              <span>
+                <strong id="followers"></strong>
+                Followers
+              </span>
+
+              <span>
+                <strong id="following"></strong>
+                Following
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section id="repositories" class="repositories-section" hidden>
+          <h2>Top Repositories</h2>
+
+          <div id="repo-list" class="repo-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Services</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="services-page">
+      <h1>Our Services</h1>
+
+      <section class="filters">
+        <label for="service-search"> Search Services </label>
+
+        <input
+          type="search"
+          id="service-search"
+          placeholder="Search services..."
+          autocomplete="off"
+        />
+
+        <label for="category-filter"> Category </label>
+
+        <select id="category-filter">
+          <option value="">All Categories</option>
+          <option value="development">Development</option>
+          <option value="design">Design</option>
+          <option value="marketing">Marketing</option>
+        </select>
+      </section>
+
+      <section id="services-lsit" class="services-list" aria-live="polite">
+        <article class="service-card" data-category="development">
+          <h2>Web Development</h2>
+
+          <p>Building modern and responsive websites.</p>
+        </article>
+
+        <article class="service-card" data-category="development">
+          <h2>Javascript Development</h2>
+
+          <p>Creating interactive web applications with JavaScript.</p>
+        </article>
+
+        <article class="service-card" data-category="design">
+          <h2>UI Design</h2>
+
+          <p>Designing clean and user-friendly interfaces.</p>
+        </article>
+
+        <article class="service-card" data-category="design">
+          <h2>UX Design</h2>
+          <p>Improving the user experience of digital products.</p>
+        </article>
+
+        <article class="service-card" data-category="marketing">
+          <h2>Digital Marketing</h2>
+
+          <p>Growing businesses through digital marketing strategies.</p>
+        </article>
+      </section>
+
+      <p id="no-results" class="no-results" hidden>No services found.</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
