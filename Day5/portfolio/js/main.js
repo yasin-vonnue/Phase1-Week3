@@ -6,6 +6,9 @@ import { setupScrollAnimations } from "./components/scrollAnimations.js";
 import { setupBackToTop } from "./components/backToTop.js";
 import { setupReadingProgress } from "./components/readingProgress.js";
 import { setupContactFormValidation } from "./components/formValidator.js";
+import { setupServicesAPI } from "./components/serviceApi.js";
+import { setupTeamAPI } from "./components/teamApi.js";
+import { setupHomeNewAPI } from "./components/homeNewApi.js";
 
 setupNavigation();
 setupDarkMode();
@@ -15,3 +18,6 @@ setupScrollAnimations();
 setupBackToTop();
 setupReadingProgress();
 setupContactFormValidation();
+setupServicesAPI();
+setupTeamAPI();
+setupHomeNewAPI();

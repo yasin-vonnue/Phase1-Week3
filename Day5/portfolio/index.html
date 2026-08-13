@@ -164,6 +164,23 @@
           </article>
         </div>
       </section>
+
+      <section class="latest-posts" aria-labelledby="latest-posts-title">
+        <h2 id="latest-posts-title">Latest News</h2>
+
+        <div id="latest-posts-loading" class="api-loading" hidden>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+
+        <div class="api-error" id="latest-posts-error" role="alert" hidden>
+          <p>Unable to load the latest news.</p>
+          <button type="button" id="latest-posts-retry">Try Again</button>
+        </div>
+
+        <div id="latest-posts-list" class="news-grid" aria-live="polite"></div>
+      </section>
     </main>
 
     <footer>

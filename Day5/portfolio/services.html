@@ -7,7 +7,7 @@
 
     <meta
       name="description"
-      content="Tailer-made software solutions with engineering teams delivering intuitive,high performance solutions."
+      content="Tailor-made software solutions with engineering teams delivering intuitive,high performance solutions."
     />
 
     <meta property="og:title" content="We provide high quality services" />
@@ -57,7 +57,7 @@
           <a href="./index.html">Home</a>
           <a href="./about.html">About</a>
           <a href="./team.html">Team</a>
-          <a href="" aria-current="page">Services</a>
+          <a href="./services.html" aria-current="page">Services</a>
           <a href="./gallery.html">Gallery</a>
           <a href="./contact.html">Contact Us</a>
         </div>
@@ -65,89 +65,38 @@
     </header>
 
     <main>
-      <section class="features">
-        <div class="services-grid">
-          <article class="service-card">
-            <h3>Custom Software Development</h3>
-            <p>
-              We build tailor-made software solutions designed to solve your
-              unique business challenges. From enterprise applications to
-              scalable web and mobile platforms, our engineering team delivers
-              intuitive, high-performance software that drives operational
-              efficiency, enhances user engagement, and positions your business
-              for sustainable growth.
-            </p>
+      <section class="features" aria-labelledby="services-title">
+        <h2 id="services-title">Our Services</h2>
 
-            <h4>Features</h4>
-            <ul>
-              <li>End-to-end agile development (planning to deployment)</li>
-              <li>Cross-platform compatibility (web, iOS, Android)</li>
-              <li>Rigorous QA testing and automated debugging</li>
-            </ul>
+        <div class="service-controls">
+          <div class="form-group">
+            <label for="service-search">Search services</label>
 
-            <p>
-              <a href="https://www.marvelstudios.com"
-                >Schedule a Development Consultation</a
-              >
-            </p>
-          </article>
+            <input
+              type="search"
+              id="service-search"
+              placeholder="Search by service name or description"
+              autocomplete="off"
+            />
+          </div>
 
-          <article class="card service-card">
-            <h3>Managed IT Support & Help Desk</h3>
-            <p>
-              Eliminate tech downtime with our proactive Managed IT Services. We
-              act as your dedicated IT department, providing 24/7 network
-              monitoring, routine system maintenance, and rapid-response help
-              desk support. We identify and resolve vulnerabilities before they
-              disrupt your day-to-day operations, ensuring your entire team
-              stays connected, productive, and secure.
-            </p>
-
-            <h4>Features</h4>
-
-            <ul>
-              <li>24/7 Threat detection and response (MDR)</li>
-              <li>Robust data backup and disaster recovery planning</li>
-              <li>Cloud infrastructure and firewall management</li>
-            </ul>
-
-            <p>
-              <a href="https://www.marvelstudios.com"
-                >Get a Free Cybersecurity Audit</a
-              >
-            </p>
-          </article>
-
-          <article class="card service-card">
-            <h3>Cloud Infrastructure & Migration Services</h3>
-            <p>
-              Modernize your business operations with our end-to-end Cloud
-              Services. We assist in seamless cloud migration, infrastructure
-              optimization, and scalable data storage. Whether you are
-              transitioning to a public cloud, a private server, or a hybrid
-              environment, we guarantee robust security, optimized performance,
-              and cost-effective scalability.
-            </p>
-
-            <h4>Features</h4>
-
-            <ul>
-              <li>Zero-downtime cloud migration strategies</li>
-              <li>Scalable server infrastructure with auto-provisioning</li>
-              <li>Peformance optimization and ongoing cloud support</li>
-            </ul>
-
-            <p>
-              <a href="https://www.marvelstudios.com">Explore Cloud Services</a>
-            </p>
-          </article>
+          <div class="select-wrapper">
+            <label for="service-category">Filter by category</label>
+            <select id="service-category">
+              <option value="all">All Categories</option>
+            </select>
+          </div>
         </div>
+
+        <div id="services-status" aria-live="polite"></div>
+
+        <div id="services-grid" class="services-grid" aria-live="polite"></div>
       </section>
 
       <section class="pricing">
         <table class="pricing-table">
           <caption>
-            Service Comparision Matrix
+            Service Comparison Matrix
           </caption>
 
           <thead>
