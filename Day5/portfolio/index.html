@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Marvel Studios | Home</title>
+
+    <meta
+      name="description"
+      content="Marvel Studios officially ushered in its next definitive era today, with a lineup of feature films."
+    />
+
+    <meta property="og:title" content="Marvel Studios Pvt. Ltd. | Home" />
+    <meta
+      property="og:description"
+      content="Marvel Studios officially ushered in its next definitive era today, with a lineup of feature films."
+    />
+    <meta property="og:image" content="./images/hero.webp" />
+    <meta property="og:url" content="https://www.marvelstudios.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Marvel Studios" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <div class="reading-progress" aria-hidden="true"></div>
+
+    <header>
+      <h1>Marvel Studios Pvt. Ltd.</h1>
+
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="logo">
+          <a href="./index.html" aria-label="Marvel Studios home">
+            <img src="./images/marvel-logo.svg" alt="Marvel Studios logo" />
+          </a>
+        </div>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          &#9776;
+        </button>
+
+        <div class="navlinks" id="main-navigation">
+          <button
+            type="button"
+            class="menu-close"
+            aria-label="Close navigation menu"
+          >
+            &#10005;
+          </button>
+
+          <a href="./index.html" aria-current="page">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./team.html">Team</a>
+          <a href="./services.html">Services</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./contact.html">Contact Us</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <h2 id="hero-title">Welcome to Marvel Studios</h2>
+          <p>Stories that inspire generations.</p>
+        </div>
+      </section>
+
+      <section class="features" aria-labelledby="features-title">
+        <div class="section-title scroll-animate">
+          <h2 id="features-title">Why Choose Our Platform</h2>
+
+          <p>
+            Everything you need to scale your business, automated in one central
+            workspace.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <article class="card scroll-animate">
+            <h3>Lightning Fast Analytics</h3>
+
+            <p>
+              Get insights on your data instantly with our blazing-fast
+              processing engine.
+            </p>
+          </article>
+
+          <article class="card scroll-animate">
+            <h3>Enterprise Security</h3>
+
+            <p>
+              Your data stays completely safe with our bank-grade encryption
+              algorithms.
+            </p>
+          </article>
+
+          <article class="card scroll-animate">
+            <h3>Automated Workflows</h3>
+
+            <p>
+              Connect your tools and let AI execute repetitive tasks
+              automatically.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="testimonials" aria-labelledby="testimonials-title">
+        <h2 id="testimonials-title" class="scroll-animate">Testimonials</h2>
+
+        <div class="testimonials-row">
+          <article class="card scroll-animate">
+            <blockquote>
+              <p>
+                "This service completely changed how we manage our daily
+                workflows. The onboarding process was seamless, and the
+                interface is incredibly intuitive."
+              </p>
+            </blockquote>
+
+            <cite>
+              <span>Sarah Jenkins</span>
+              <span>Operations Director, TechCorp</span>
+            </cite>
+          </article>
+
+          <article class="card scroll-animate">
+            <blockquote>
+              <p>
+                "Our team's productivity skyrocketed by 40% in the first month
+                alone. The automated reporting tools save us hours of manual
+                data entry every week."
+              </p>
+            </blockquote>
+
+            <cite>
+              <span>David Chen</span>
+              <span>Founder, Apex Digital</span>
+            </cite>
+          </article>
+
+          <article class="card scroll-animate">
+            <blockquote>
+              <p>
+                "The customer support team is outstanding. They answered my
+                questions within minutes and helped us customize the platform to
+                fit our exact needs."
+              </p>
+            </blockquote>
+
+            <cite>
+              <span>Elena Rostova</span>
+              <span>Product Manager, Innovate LLC</span>
+            </cite>
+          </article>
+        </div>
+      </section>
+
+      <section class="latest-posts" aria-labelledby="latest-posts-title">
+        <h2 id="latest-posts-title">Latest News</h2>
+
+        <div id="latest-posts-loading" class="api-loading" hidden>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+          <div class="skeleton-card"></div>
+        </div>
+
+        <div class="api-error" id="latest-posts-error" role="alert" hidden>
+          <p>Unable to load the latest news.</p>
+          <button type="button" id="latest-posts-retry">Try Again</button>
+        </div>
+
+        <div id="latest-posts-list" class="news-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Marvel Studios. All Rights Reserved.</p>
+    </footer>
+
+    <button type="button" class="back-to-top" aria-label="Back to top" hidden>
+      &#8593;
+    </button>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

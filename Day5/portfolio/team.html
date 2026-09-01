@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Our Team | Marvel Studios</title>
+
+    <meta
+      name="description"
+      content="Meet the Marvel Studios team of developers, project leads, and technology professionals."
+    />
+
+    <meta property="og:title" content="Our Team | Marvel Studios" />
+    <meta
+      property="og:description"
+      content="Meet our dedicated team of developers and technology professionals."
+    />
+    <meta property="og:image" content="./images/hero.webp" />
+    <meta property="og:url" content="https://www.marvelstudios.com/team.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Marvel Studios" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <div class="reading-progress" aria-hidden="true"></div>
+
+    <header>
+      <h1>Marvel Studios Pvt. Ltd.</h1>
+
+      <h2 class="page-title">Meet Our Team</h2>
+
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="logo">
+          <a href="./index.html" aria-label="Marvel Studios home">
+            <img src="./images/marvel-logo.svg" alt="Marvel Studios logo" />
+          </a>
+        </div>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          &#9776;
+        </button>
+
+        <div class="navlinks" id="main-navigation">
+          <button
+            type="button"
+            class="menu-close"
+            aria-label="Close navigation menu"
+          >
+            &#10005;
+          </button>
+
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./team.html" aria-current="page">Team</a>
+          <a href="./services.html">Services</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./contact.html">Contact Us</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="team" aria-labelledby="team-title">
+        <h2 id="team-title">Our Team</h2>
+
+        <div class="team-controls">
+          <div class="select-wrapper">
+            <label for="team-department">Filter by department</label>
+
+            <select id="team-department">
+              <option value="all">All Departments</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="team-status" aria-live="polite"></div>
+
+        <div id="team-grid" class="team-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Marvel Studios. All Rights Reserved.</p>
+    </footer>
+
+    <button type="button" class="back-to-top" aria-label="Back to top" hidden>
+      &#8593;
+    </button>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

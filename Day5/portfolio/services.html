@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services Page</title>
+
+    <meta
+      name="description"
+      content="Tailor-made software solutions with engineering teams delivering intuitive,high performance solutions."
+    />
+
+    <meta property="og:title" content="We provide high quality services" />
+    <meta
+      property="og:description"
+      content="modern business operations with our end-to-end high quality services with operational efficiency and user management."
+    />
+    <meta property="og:image" content="./images/hero.webp" />
+    <meta property="og:url" content="https://www.marvelstudios.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Marvel Studios" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="reading-progress" aria-hidden="true"></div>
+
+    <header>
+      <h1>Marvel Studios Pvt. Ltd.</h1>
+      <h2 class="page-title">Our Services</h2>
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="logo">
+          <a href="./index.html" aria-label="Marvel Studios home">
+            <img src="./images/marvel-logo.svg" alt="Marvel Studios logo" />
+          </a>
+        </div>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          &#9776;
+        </button>
+
+        <div class="navlinks" id="main-navigation">
+          <button
+            type="button"
+            class="menu-close"
+            aria-label="Close navigation menu"
+          >
+            &#10005;
+          </button>
+
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./team.html">Team</a>
+          <a href="./services.html" aria-current="page">Services</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./contact.html">Contact Us</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="features" aria-labelledby="services-title">
+        <h2 id="services-title">Our Services</h2>
+
+        <div class="service-controls">
+          <div class="form-group">
+            <label for="service-search">Search services</label>
+
+            <input
+              type="search"
+              id="service-search"
+              placeholder="Search by service name or description"
+              autocomplete="off"
+            />
+          </div>
+
+          <div class="select-wrapper">
+            <label for="service-category">Filter by category</label>
+            <select id="service-category">
+              <option value="all">All Categories</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="services-status" aria-live="polite"></div>
+
+        <div id="services-grid" class="services-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="pricing">
+        <table class="pricing-table">
+          <caption>
+            Service Comparison Matrix
+          </caption>
+
+          <thead>
+            <tr>
+              <th scope="col">Criteria</th>
+              <th scope="col">Custom Software Development</th>
+              <th class="recommended" scope="col">Managed IT Support</th>
+              <th scope="col">Cloud Infrastructure & Migration</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <th scope="row">Primary Focus</th>
+              <td>Building bespoke applications</td>
+              <td class="recommended">
+                Ongoing maintenance & technical support
+              </td>
+              <td>System scaling & cloud hosting</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Setup Time</th>
+              <td>High (3 to 12+ months)</td>
+              <td class="recommended">Immediate (within 24-48 hours)</td>
+              <td>Medium (2 to 6 weeks)</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Cost Model</th>
+              <td>Milestone-based project fees</td>
+              <td class="recommended">Flat monthly retainer</td>
+              <td>Project-based + ongoing cloud usage</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Technical Complexity</th>
+              <td>Very High (From-scratch coding)</td>
+              <td class="recommended">Low (Standardized systems)</td>
+              <td>High (Architecture & Compliance)</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Team Size Assigned</th>
+              <td>Full Squad (PMs, UI/UX, Devs, QA)</td>
+              <td class="recommended">1-2 Dedicated IT Support Techs</td>
+              <td>3-5 Cloud Architects & Engineers</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Target Audience</th>
+              <td>Enterprises needing unique workflows</td>
+              <td class="recommended">All businesses needing daily IT help</td>
+              <td>Organizations scaling remote operations</td>
+            </tr>
+
+            <tr>
+              <th scope="row">scalability</th>
+              <td>Infinitely scalable based on codebase</td>
+              <td class="recommended">
+                Standardized, adjusts, via tier upgrades
+              </td>
+              <td>Highly scalable, on-demand resources</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Security Responsibility</th>
+              <td>Fully built-in application security</td>
+              <td class="recommended">Managed endpoint protection</td>
+              <td>Shared responsibility (provider + client)</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Maintenance</th>
+              <td>Requires ongoing version updates</td>
+              <td class="recommended">continuous (Included in retainer)</td>
+              <td>Post-migration monitoring</td>
+            </tr>
+
+            <tr>
+              <th scope="row">Business Impact</th>
+              <td>Provides distinct competitive advantage</td>
+              <td class="recommended">Minimizes daily operational downtime</td>
+              <td>Boosts agility and remote access</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <h3>
+            <button
+              type="button"
+              class="faq-question"
+              aria-expanded="false"
+              aria-controls="faq-answer-4"
+            >
+              Do you provide cloud migration services?
+            </button>
+          </h3>
+
+          <div id="faq-answer-4" class="faq-answer" hidden>
+            <p>
+              Yes. We support cloud migration, infrastructure optimization,
+              scalable storage, and ongoing cloud support.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="cta-section">
+      <div class="cta-text">
+        <h2>Need helping solving your problem?</h2>
+        <p>Contact our team.</p>
+      </div>
+
+      <form class="cta-form">
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <textarea placeholder="Message"></textarea>
+        <button>Submit</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Marvel Studios. All Rights Reserved.</p>
+    </footer>
+
+    <button type="button" class="back-to-top" aria-label="Back to top" hidden>
+      &#8593;
+    </button>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

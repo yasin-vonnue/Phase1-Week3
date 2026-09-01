@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contact Us Page</title>
+
+    <meta
+      name="description"
+      content="Have a question or need assistance? Contact Marvel Studios today."
+    />
+
+    <meta
+      property="og:title"
+      content="We are here for you when you need Us the most."
+    />
+    <meta
+      property="og:description"
+      content="Need help with your order or account? Contact Marvel Studios support team."
+    />
+    <meta property="og:image" content="./images/hero.webp" />
+    <meta property="og:url" content="https://www.marvelstudios.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Marvel Studios" />
+
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+
+  <body>
+    <div class="reading-progress" aria-hidden="true"></div>
+
+    <header>
+      <h1 class="page-title">Marvel Studios Pvt. Ltd.</h1>
+      <h2 class="page-title">Contact Us</h2>
+
+      <nav class="navbar" aria-label="Main navigation">
+        <div class="logo">
+          <a href="./index.html" aria-label="Marvel Studios home">
+            <img src="./images/marvel-logo.svg" alt="Marvel Studios logo" />
+          </a>
+        </div>
+
+        <button
+          type="button"
+          class="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="main-navigation"
+        >
+          &#9776;
+        </button>
+
+        <div class="navlinks" id="main-navigation">
+          <button
+            type="button"
+            class="menu-close"
+            aria-label="Close navigation menu"
+          >
+            &#10005;
+          </button>
+
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+          <a href="./team.html">Team</a>
+          <a href="./services.html">Services</a>
+          <a href="./gallery.html">Gallery</a>
+          <a href="./contact.html" aria-current="page">Contact Us</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-form-section" aria-labelledby="contact-title">
+        <h2 id="contact-title">Get in Touch</h2>
+
+        <form id="contact-form" novalidate>
+          <fieldset>
+            <legend>Personal Details</legend>
+
+            <div class="form-group">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder=" "
+                autocomplete="name"
+                required
+                aria-describedby="name-error"
+              />
+              <label for="name">Enter your Name:</label>
+              <span id="name-error" class="field-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder=" "
+                autocomplete="email"
+                required
+                aria-describedby="email-error"
+              />
+              <label for="email">Enter your Email:</label>
+              <span id="email-error" class="field-error" role="alert"></span>
+            </div>
+
+            <div class="form-group">
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder=" "
+                autocomplete="tel"
+                aria-describedby="phone-error"
+              />
+              <label for="phone">Enter your Phone number:</label>
+              <span id="phone-error" class="field-error" role="alert"></span>
+            </div>
+
+            <div class="select-wrapper">
+              <label for="department">Select your Department:</label>
+
+              <select name="department" id="department" required>
+                <option value="">Select Department</option>
+                <option value="operations">Operations</option>
+                <option value="design">Design</option>
+                <option value="qa">QA</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <textarea
+                name="message"
+                id="message"
+                placeholder=" "
+                required
+                aria-describedby="message-error"
+              ></textarea>
+              <label for="message">Write your Message:</label>
+              <span id="message-error" class="field-error" role="alert"></span>
+            </div>
+
+            <label class="checkbox">
+              <input type="checkbox" name="newsletter" id="newsletter" />
+              <span aria-hidden="true"></span>
+              Subscribe to our newsletter
+            </label>
+
+            <button type="submit" class="btn">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <section class="location-section" aria-labelledby="location-title">
+        <h2 id="location-title">Location</h2>
+
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.572279223106!2d-89.05813492344285!3d37.893684305300255!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8877217f6c5d5a2f%3A0x5bcb82fab72a8d4c!2sMaple%20St%2C%20Six%20Mile%20Township%2C%20IL%2C%20USA!5e0!3m2!1sen!2sin!4v1784712198655!5m2!1sen!2sin"
+            title="Marvel Studios Pvt. Ltd. location map"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="address-section" aria-labelledby="address-title">
+        <h2 id="address-title">Address</h2>
+
+        <address>
+          Marvel Studios Pvt. Ltd.<br />
+          123 Maple Street,<br />
+          Suite 100,<br />
+          Anytown, NY 12345
+        </address>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Marvel Studios. All Rights Reserved.</p>
+    </footer>
+
+    <button type="button" class="back-to-top" aria-label="Back to top" hidden>
+      &#8593;
+    </button>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
